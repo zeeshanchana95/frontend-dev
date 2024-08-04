@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Hyperlinks</title>
+  </head>
+  <body>
+    <!-- Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. -->
+
+    <!-- anatomy of a link -->
+    <p>
+      I'm creating a link to
+      <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+    </p>
+
+    <!-- block-level links -->
+    <a href="https://developer.mozilla.org/en-US/">
+      <h1>MDN Web Docs</h1>
+    </a>
+
+    <!-- image links -->
+    <a href="https://developer.mozilla.org/en-US/">
+      <img src="mdn_logo.svg" alt="MDN Web Docs" />
+    </a>
+
+    <!-- adding supporting information with title attribute -->
+    <p>
+      I'm creating a link to
+      <a
+        href="https://www.mozilla.org/en-US/"
+        title="The best place to find more information about Mozilla's
+                mission and how to contribute"
+      >
+        the Mozilla homepage</a
+      >.
+    </p>
+
+    <!-- A quick primer on URLs and paths -->
+    <!-- 
+        A URL, or Uniform Resource Locator is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at https://www.mozilla.org/en-US/.
+
+        URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem.
+     -->
+
+    <!-- when linked files are in the same directory -->
+    <p>
+      Want to contact a specific staff member? Find details on our
+      <a href="contacts.html">contacts page</a>.
+    </p>
+
+    <!-- when linked file is inside another directory -->
+    <p>Visit my <a href="projects/index.html">project homepage</a>.</p>
+
+    <!-- 
+        Moving back up into parent directories:
+            If you wanted to include a hyperlink inside projects/index.html pointing to pdfs/project-brief.pdf, you'd have to go up a directory level, then back down into the pdfs directory. To go up a directory, use two dots — .. — so the URL you would use is ../pdfs/project-brief.pdf:
+    -->
+    <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
+
+    <!-- document fragments -->
+    <h2 id="Mailing_address">Mailing address</h2>
+    <p>
+      Want to write us a letter? Use our
+      <a href="contacts.html#Mailing_address">mailing address</a>.
+    </p>
+
+    <!-- use the document fragment reference on its own to link to another part of the current document: -->
+    <p>
+      The <a href="#Mailing_address">company mailing address</a> can be found at
+      the bottom of this page.
+    </p>
+
+    <!-- Absolute vs Relative URLs -->
+    <!-- absolute URL: Points to a location defined by its absolute location on the web, including protocol and domain name. Example: https://www.example.com/projects/index.html  -->
+
+    <!-- relative URL: Points to a location that is relative to the file you are linking from, more like what we looked at in the previous section. Example: pdfs/project-brief.pdf -->
+
+    <!-- Link best practices -->
+    <!-- Use clear link wording -->
+    <!-- Don't repeat the URL as part of the link text -->
+    <!-- Don't say "link" or "links to" in the link text -->
+    <!-- Keep your link text as short as possible -->
+    <!-- Minimize instances where multiple copies of the same text are linked to different places.  -->
+    <p><a href="https://www.mozilla.org/en-US/firefox/">Download Firefox</a></p>
+
+    <!--Linking to non-HTML resources — leave clear signposts  -->
+    <p>
+      <a href="https://www.example.com/large-report.pdf">
+        Download the sales report (PDF, 10MB)
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.example.com/video-stream/" target="_blank">
+        Watch the video (stream opens in separate tab, HD quality)
+      </a>
+    </p>
+
+    <!-- Use the download attribute when linking to a download -->
+    <a
+      href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+      download="firefox-latest-64bit-installer.exe"
+    >
+      Download Latest Firefox for Windows (64-bit) (English, US)
+    </a>
+
+    <!-- Active learning: creating a navigation menu -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pictures.html">Pictures</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="social.html">Social</a></li>
+    </ul>
+
+    <h1>Homepage</h1>
+    <p>Welcome to my exiting homepage</p>
+
+    <!-- email links -->
+    <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+
+    <!-- specifying details -->
+    <a
+      href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
+    >
+      Send mail with cc, bcc, subject and body
+    </a>
+
+    <!-- Note: The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces percent-escaped. Also, note the use of the question mark (?) to separate the main URL from the field values, and ampersands (&) to separate each field in the mailto: URL. This is standard URL query notation. Read The GET method to understand what URL query notation is more commonly used for. -->
+  </body>
+</html>
