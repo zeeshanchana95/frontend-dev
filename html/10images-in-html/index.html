@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images in HTML</title>
+  </head>
+  <body>
+    <h1>Images in HTML</h1>
+
+    <h2>Adding Image on Webpage</h2>
+    <!-- relative path -->
+    <img src="dinosaur.jpg" alt="Dinosaur" />
+    <img src="images/dinosaur.jpg" alt="Dinosaur" />
+
+    <!-- absolute path -->
+    <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
+
+    <h2>Alternative Text, width and Height Attributes</h2>
+    <img
+      src="images/dinosaur.jpg"
+      alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+      width="400"
+      height="300"
+      title="A T-Rex on display in the Manchester University Museum"
+    />
+
+    <!-- it's always better pratice to add width and height attributes -->
+
+    <h2>Annotating images with figures and figure captions</h2>
+    <figure>
+      <img
+        src="images/dinosaur.jpg"
+        alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+        width="400"
+        height="341"
+      />
+      <figcaption>
+        A T-Rex on display in the Manchester University Museum.
+      </figcaption>
+    </figure>
+
+    <!-- you can use css to add image
+    p {
+        background-image: url("images/dinosaur.jpg");
+    }
+    -->
+  </body>
+</html>
